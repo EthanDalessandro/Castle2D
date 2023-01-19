@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1323298292531920879}
   - component: {fileID: 1323298292531920876}
   - component: {fileID: 1323298292531920878}
+  - component: {fileID: 3158233958061651252}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -150,7 +151,22 @@ MonoBehaviour:
   timeBeforeInvisiblity: 0.5
   cooldownForNextPathSpot: 0.2
   isMoving: 0
+  isInvisible: 0
   isSettingPath: 0
+  isSaw: 0
   pathSpotPrefab: {fileID: 8402795623216806133, guid: 597df710f8568b84f83a8282bc4da788, type: 3}
   limitPathCount: 15
   pathPlayerList: []
+--- !u!114 &3158233958061651252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323298292531920870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7892a41e6b2a8604eb0460bde20126fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundLoseScreen: {fileID: 0}

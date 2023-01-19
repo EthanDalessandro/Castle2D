@@ -8,6 +8,7 @@ public class PlayerMovements : MonoBehaviour
     private float cooldownForNextPathSpotContainer;
     float cooldownPrefab;
     public bool isMoving;
+    public bool isInvisible;
     public bool isSettingPath;
     public bool isSaw = false;
     SpriteRenderer playerSprite;
@@ -31,10 +32,6 @@ public class PlayerMovements : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            isSaw = !isSaw;
-        }
         Movement();
         Rotation();
         Invisibility();
@@ -51,35 +48,39 @@ public class PlayerMovements : MonoBehaviour
         {
             agent.isStopped = false;
         }
-        if (Input.GetKey(KeyCode.Mouse0)) //tant que je reste appuyer sur la clique gauche
+
+        if(isInvisible == true) // Si le personnage est invisible alors je peux tracer mon chemin
         {
-
-            lastClickedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            if (pathPlayerList.Count == 0)
+            if (Input.GetKey(KeyCode.Mouse0)) //tant que je reste appuyer sur la clique gauche
             {
-                cooldownForNextPathSpot = 0f;
-            }
-            else
-            {
-                cooldownForNextPathSpot = cooldownForNextPathSpotContainer;
-            }
 
-            cooldownPrefab += Time.deltaTime;
-            if ((cooldownPrefab >= cooldownForNextPathSpot) && (isMoving == false) && (pathPlayerList.Count + 1 <= limitPathCount))
-            {
-                isSettingPath = true;
-                allMob.StopAllEnemy();
-                GameObject instantiatedPrefab = Instantiate(pathSpotPrefab, lastClickedPosition, Quaternion.identity);
-                pathPlayerList.Add(instantiatedPrefab);
-                cooldownPrefab = 0;
+                lastClickedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // je récupère la position de mon dernier clique sur l'écran
+
+                if (pathPlayerList.Count == 0)
+                {
+                    cooldownForNextPathSpot = 0f;
+                }
+                else
+                {
+                    cooldownForNextPathSpot = cooldownForNextPathSpotContainer;
+                }
+
+                cooldownPrefab += Time.deltaTime;
+                if ((cooldownPrefab >= cooldownForNextPathSpot) && (pathPlayerList.Count + 1 <= limitPathCount))
+                {
+                    isSettingPath = true;
+                    allMob.StopAllEnemy(); //ici je stop tous les ennemies pendant que je trâce mon chemin
+                    GameObject instantiatedPrefab = Instantiate(pathSpotPrefab, lastClickedPosition, Quaternion.identity);
+                    pathPlayerList.Add(instantiatedPrefab);
+                    cooldownPrefab = 0;
+                }
             }
         }
 
         if (Input.GetKeyUp(KeyCode.Mouse0)) // Une fois que je relâche le clique gauche
         {
             isSettingPath = false;
-            allMob.ResumeAllEnemyMovement();
+            allMob.ResumeAllEnemyMovement();// les mobs vont se remettre en routes
 
             if (pathPlayerList.Count == 0)
             {
@@ -120,11 +121,13 @@ public class PlayerMovements : MonoBehaviour
 
             if (timeBeforeInvisiblityCoolDown >= timeBeforeInvisiblity)
             {
+                isInvisible = true;
                 playerSprite.color = new Color(1f, 1f, 1f, 0.5f);
             }
         }
         else
         {
+            isInvisible = false;
             timeBeforeInvisiblityCoolDown = 0f;
             playerSprite.color = new Color(1f, 1f, 1f, 1f);
         }
