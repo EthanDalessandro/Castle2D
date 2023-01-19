@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 26502
+  controlID: 16568
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -91,7 +91,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 26503
+  controlID: 16569
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 26368
+  controlID: 16433
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,8 +193,8 @@ MonoBehaviour:
     y: 0
     width: 1178
     height: 707
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -491,9 +491,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1415701, y: 2.447993, z: 0.080845304}
+    m_Target: {x: -2.7925868, y: 0.40134072, z: 0.09625779}
     speed: 2
-    m_Value: {x: -1.1415701, y: 2.447993, z: 0.080845304}
+    m_Value: {x: -2.7925868, y: 0.40134072, z: 0.09625779}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -543,9 +543,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.460917
+    m_Target: 7.444575
     speed: 2
-    m_Value: 3.460917
+    m_Value: 7.444575
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -589,8 +589,8 @@ MonoBehaviour:
     y: 0
     width: 287
     height: 707
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -627,9 +627,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8aa5f5ff
-      m_LastClickedID: -678518
-      m_ExpandedIDs: 2afbffff285f0000805f0000
+      m_SelectedIDs: d66b0000
+      m_LastClickedID: 27606
+      m_ExpandedIDs: 2afbffff546b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -645,7 +645,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 7}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 26504
+  controlID: 16570
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -746,22 +746,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Player
+    - Assets/Scripts/Light
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 40
   m_LastFolders:
-  - Assets/Scripts/Player
+  - Assets/Scripts/Light
   m_LastFoldersGridSize: 40
   m_LastProjectPath: E:\Github\Castle\Castle2D\Castle Thief
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 70bd0000
-    m_LastClickedID: 48496
-    m_ExpandedIDs: 00000000166200001e620000206200001e99000082990000d6a30000d8a3000000ca9a3b
+    scrollPos: {x: 0, y: 1}
+    m_SelectedIDs: 1a960000
+    m_LastClickedID: 38426
+    m_ExpandedIDs: 00000000586e00005a6e00005c6e00005e6e0000606e0000626e00000270000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -789,7 +789,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e620000206200001e99000082990000d6a30000d8a3000000ca9a3b
+    m_ExpandedIDs: 00000000586e00005a6e00005c6e00005e6e0000606e0000626e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -814,8 +814,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 8aa5f5ff
-    m_LastClickedInstanceID: -678518
+    m_SelectedInstanceIDs: d66b0000
+    m_LastClickedInstanceID: 27606
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000326500007e60000000000000
     m_RenameOverlay:
@@ -833,7 +833,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
